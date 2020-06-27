@@ -34,12 +34,6 @@ function SEO({ description, lang, meta }) {
       }}
       title={site.siteMetadata.title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
-      link={[
-        {
-          href: `https://api.tiles.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css`,
-          rel: `stylesheet`,
-        },
-      ]}
       meta={[
         {
           name: `description`,
