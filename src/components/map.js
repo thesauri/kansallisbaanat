@@ -26,31 +26,33 @@ const Map = () => {
 }
 
 const addRoutes = map => {
-  const routeData = routes[0].routes[0]
-  const route = routeData.geometry.coordinates
-  map.addLayer({
-    id: "route",
-    type: "line",
-    source: {
-      type: "geojson",
-      data: {
-        type: "Feature",
-        properties: {},
-        geometry: {
-          type: "LineString",
-          coordinates: route,
+  routes.forEach(route => {
+    const routeData = route.routes[0]
+    const routeCoordinates = routeData.geometry.coordinates
+    map.addLayer({
+      id: `route-${route.uuid}`,
+      type: "line",
+      source: {
+        type: "geojson",
+        data: {
+          type: "Feature",
+          properties: {},
+          geometry: {
+            type: "LineString",
+            coordinates: routeCoordinates,
+          },
         },
       },
-    },
-    layout: {
-      "line-join": "round",
-      "line-cap": "round",
-    },
-    paint: {
-      "line-color": ROUTE_COLOR,
-      "line-width": 5,
-      "line-opacity": 0.75,
-    },
+      layout: {
+        "line-join": "round",
+        "line-cap": "round",
+      },
+      paint: {
+        "line-color": ROUTE_COLOR,
+        "line-width": 5,
+        "line-opacity": 0.75,
+      },
+    })
   })
 }
 
