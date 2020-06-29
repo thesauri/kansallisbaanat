@@ -1,4 +1,5 @@
 export const MUHOS_HAILUOTO = {
+  name: "Muhos-Hailuoto",
   routes: [
     {
       weight_name: "routability",

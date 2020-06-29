@@ -1,4 +1,5 @@
 export const VAAKSY_JYVASKYLA = {
+  name: "Vääksy-Jyväskylä",
   routes: [
     {
       weight_name: "routability",

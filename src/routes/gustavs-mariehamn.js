@@ -1,4 +1,5 @@
 export const GUSTAVS_MARIEHAMN = {
+  name: "Kustavi-Maarianhamina",
   routes: [
     {
       weight_name: "routability",

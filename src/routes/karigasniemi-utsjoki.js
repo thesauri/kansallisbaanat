@@ -1,4 +1,5 @@
 export const KARIGASNIEMI_UTSJOKI = {
+  name: "Karigasniemi-Utsjoki",
   routes: [
     {
       weight_name: "routability",

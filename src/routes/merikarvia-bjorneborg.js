@@ -1,4 +1,5 @@
 export const MERIKARVIA_BJORNEBORG = {
+  name: "Merikarvia-Pori",
   routes: [
     {
       weight_name: "routability",

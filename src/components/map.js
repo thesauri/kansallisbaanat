@@ -1,4 +1,4 @@
-import React, { useCallback } from "react"
+import React, { useCallback, useState } from "react"
 import mapboxgl from "mapbox-gl"
 import "./map.css"
 import routes from "../routes/routes"
@@ -12,6 +12,7 @@ const NORTHEAST_BOUNDS = [50, 71.001109]
 const MAP_BOUNDS = [SOUTHWEST_BOUNDS, NORTHEAST_BOUNDS]
 
 const Map = () => {
+  const [selectedRoute, setSelectedRoute] = useState(null)
   const setupMap = useCallback(mapElement => {
     if (mapElement === null) {
       return
@@ -25,14 +26,32 @@ const Map = () => {
     })
 
     map.on("load", () => addRoutes(map))
+    map.on("click", "routes", event => {
+      const selectedRoute = event.features[0].properties.name
+      setSelectedRoute(selectedRoute)
+    })
   }, [])
-  return <div ref={setupMap} className="map-container"></div>
+  return (
+    <>
+      <div ref={setupMap} className="map-container"></div>
+      <div
+        className="map-card"
+        style={{
+          transform: `translateY(${selectedRoute ? -128 : 0}px)`,
+        }}
+      >
+        <h3>{selectedRoute}</h3>
+      </div>
+    </>
+  )
 }
 
 const addRoutes = map => {
   const features = routes.map(route => ({
     type: "Feature",
-    properties: {},
+    properties: {
+      name: route.name,
+    },
     geometry: {
       type: "LineString",
       coordinates: route.routes[0].geometry.coordinates,

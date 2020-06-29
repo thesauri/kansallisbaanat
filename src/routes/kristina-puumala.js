@@ -1,4 +1,5 @@
 export const KRISTINA_PUUMALA = {
+  name: "Ristiina-Puumala",
   routes: [
     {
       weight_name: "routability",

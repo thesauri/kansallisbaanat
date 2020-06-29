@@ -1,4 +1,5 @@
 export const KEMIJARVI_KUUSAMO = {
+  name: "Kemijärvi-Kuusamo",
   routes: [
     {
       weight_name: "routability",

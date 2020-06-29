@@ -1,4 +1,5 @@
 export const SALO_RASEBORG = {
+  name: "Salo-Raasepori",
   routes: [
     {
       weight_name: "routability",

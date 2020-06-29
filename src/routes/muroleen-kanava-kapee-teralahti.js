@@ -1,4 +1,5 @@
 export const MUROLEEN_KANAVA_KAPEE_TERALAHTI = {
+  name: "Muroleen kanava-Terälahti",
   routes: [
     {
       weight_name: "routability",

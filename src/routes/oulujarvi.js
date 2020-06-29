@@ -1,4 +1,5 @@
 export const OULUJARVI = {
+  name: "Oulujärven ympäriajo",
   routes: [
     {
       weight_name: "routability",
