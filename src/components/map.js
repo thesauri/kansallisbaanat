@@ -7,6 +7,9 @@ mapboxgl.accessToken =
   "pk.eyJ1IjoidGhlc2F1cmkiLCJhIjoiY2tieGgzMWRwMGk3bDJxbGpya3B0ZjJ0MSJ9.675WOKVjzYQypCJLa0TFrQ"
 const CENTER_OF_FINLAND = [25, 65.3]
 const ROUTE_COLOR = "rebeccapurple"
+const SOUTHWEST_BOUNDS = [0, 55]
+const NORTHEAST_BOUNDS = [50, 71.001109]
+const MAP_BOUNDS = [SOUTHWEST_BOUNDS, NORTHEAST_BOUNDS]
 
 const Map = () => {
   const setupMap = useCallback(mapElement => {
@@ -18,6 +21,7 @@ const Map = () => {
       style: "mapbox://styles/mapbox/streets-v11",
       center: CENTER_OF_FINLAND,
       zoom: 4,
+      maxBounds: MAP_BOUNDS,
     })
 
     map.on("load", () => addRoutes(map))
