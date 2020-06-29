@@ -6,6 +6,8 @@ import { MERIKARVIA_BJORNEBORG } from "./merikarvia-bjorneborg"
 import { OULUJARVI } from "./oulujarvi"
 import { MUHOS_HAILUOTO } from "./muhos-hailuoto"
 import { KEMIJARVI_KUUSAMO } from "./kemijarvi-kuusamo"
+import { KARIGASNIEMI_UTSJOKI } from "./karigasniemi-utsjoki"
+import { GUSTAVS_MARIEHAMN } from "./gustavs-mariehamn"
 
 const routes = [
   SALO_RASEBORG,
@@ -16,6 +18,8 @@ const routes = [
   OULUJARVI,
   MUHOS_HAILUOTO,
   KEMIJARVI_KUUSAMO,
+  KARIGASNIEMI_UTSJOKI,
+  GUSTAVS_MARIEHAMN,
 ]
 
 export default routes
