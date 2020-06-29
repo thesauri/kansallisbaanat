@@ -1,5 +1,6 @@
 import React, { useCallback, useState } from "react"
 import mapboxgl from "mapbox-gl"
+import { X } from "react-feather"
 import "./map.css"
 import routes from "../routes/routes"
 
@@ -40,7 +41,13 @@ const Map = () => {
           transform: `translateY(${selectedRoute ? -128 : 0}px)`,
         }}
       >
-        <h3>{selectedRoute}</h3>
+        <div className="map-card-title">
+          <div className="map-card-title-icon"></div>
+          <h3>{selectedRoute}</h3>
+          <div className="map-card-title-icon">
+            <X onClick={() => setSelectedRoute(null)} />
+          </div>
+        </div>
       </div>
     </>
   )
